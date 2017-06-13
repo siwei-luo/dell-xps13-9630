@@ -1,0 +1,21 @@
+# PCI
+ACTION=="add", SUBSYSTEM=="pci", ATTR{power/control}="auto"
+
+# USB
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
+
+# USB Dell WD15 exceptions
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="0bda", ATTR{idProduct}=="4014", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="0424", ATTR{idProduct}=="2137", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="0424", ATTR{idProduct}=="5537", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0002", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0003", ATTR{power/control}="on"
+
+# USB Dell DA200 exceptions
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="0835", ATTR{idProduct}=="2a01", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="05e3", ATTR{idProduct}=="0610", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="05e3", ATTR{idProduct}=="0617", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="3", ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0002", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{busnum}=="4", ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0003", ATTR{power/control}="on"
